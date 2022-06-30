@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta name="author" content="Dima Buialo">
+  <meta charset="UTF-8"/>
+  <title>Buialo_coursework</title>
+  <style>
+    #pretext, #aftertext{
+      font-family: Consolas;
+      margin: 0;
+      padding: 0;
+    }
+    /*iframe{
+      border:0;
+    }*/
+  </style>
+</head>
+
+<body>
+  <div id="pretext" >#include &lt;iomanip&gt;
+#include &lt;iostream&gt;
+using namespace std;
+int main()
+{</div>
+  <div id='code' name="code">cout << "Write your code here" << endl;</div>
+  <div id='aftertext'>}</div>
+  <button id="run" onclick='run(editor1.getValue(), editor2.getValue(), editor3.getValue(), "#output");'>Run</button>
+  <p>Output:</p>
+  <pre id="output">Press run to compile</pre>
+
+<br><br>
+
+  <div id="pretext1" >#include &lt;iostream&gt;
+using namespace std;
+
+int nsd(int a, int b);
+
+int main()
+{
+    int a, b, c;
+    a = 8;
+    b = 16;
+    c = 20;
+    cout << nsd(nsd(a, b), c);
+}
+int nsd(int a, int b) {</div>
+  <div id='code1' name="code1">while (a != 0 && b != 0) {//можна редагувати
+        if (a > b) {
+            a %= b;
+        }
+        else {
+            b %= a;
+        }
+    }
+    return a + b;</div>
+  <div id='aftertext1'>}</div>
+  <button id="run1" onclick='run(editor11.getValue(), editor21.getValue(), editor31.getValue(), "#output1");'>Run</button>
+  <p>Output:</p>
+  <pre id="output1">Press run to compile</pre>
+  <script src="jquery.min.js"></script>
+  <script src="ace/ace.js"></script>
+  <script src="editor.js"></script>
+  <script src="output.js"></script>
+</body>
+</html>
